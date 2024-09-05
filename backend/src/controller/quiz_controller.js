@@ -237,28 +237,30 @@ exports.solveQuiz = async (req, res) => {
 
 
 // Get analysis for a specific question
+// controllers/quizController.js
 exports.getQuestionAnalysis = async (req, res) => {
   try {
     const { quizId } = req.params;
-
     const quiz = await Quiz.findById(quizId).populate('questions');
     if (!quiz) {
       return res.status(404).json({ message: 'Quiz not found' });
     }
 
     const analysis = quiz.questions.map(question => ({
-      questionText: question.questionText,
+      text: question.questionText,
       optionAnalysis: question.options.map(option => ({
-        text: option.text,
         selectedCount: option.selectedCount,
       })),
     }));
 
     res.status(200).json({
-      analysis,
+      quizTitle: quiz.title,
+      questions: analysis,
       createdAt: quiz.createdAt,
       impressions: quiz.impressions,
+      creationDate: quiz.createdAt,
     });
+    console.log(analysis);
   } catch (error) {
     console.error('Error fetching quiz analysis:', error);
     res.status(500).json({ message: 'Internal server error' });

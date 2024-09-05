@@ -25,13 +25,27 @@ const QuestionAnalysis = ({ quizId }) => {
     fetchQuizAnalysis();
   }, [quizId]);
 
+  const handleStatClick = (index) => {
+    setSelectedQuestionIndex(index);
+  };
+
+  const handleBackClick = () => {
+    setSelectedQuestionIndex(null);
+  };
+
   if (!quizData) {
     return <div>Loading...</div>;
   }
 
-  const handleStatClick = (index) => {
-    setSelectedQuestionIndex(index);
-  };
+  if (selectedQuestionIndex !== null) {
+    return (
+      <OptionAnalysis
+        quizId={quizId}
+        questionIndex={selectedQuestionIndex}
+        onBackClick={handleBackClick}
+      />
+    );
+  }
 
   return (
     <div className="question-analysis-container">
@@ -65,11 +79,6 @@ const QuestionAnalysis = ({ quizId }) => {
           </div>
         ))}
       </div>
-
-      {/* Conditionally render the OptionAnalysis component */}
-      {selectedQuestionIndex !== null && (
-        <OptionAnalysis quizId={quizId} questionIndex={selectedQuestionIndex} />
-      )}
     </div>
   );
 };

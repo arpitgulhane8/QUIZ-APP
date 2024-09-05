@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './optionanalysis.css';
 
-const OptionAnalysis = ({ quizId, questionIndex }) => {
-  const [optionAnalysis, setOptionAnalysis] = useState(null);
+const OptionAnalysis = ({ quizId, onBackClick }) => {
+  const [quizData, setQuizData] = useState(null);
 
   useEffect(() => {
-    const fetchOptionAnalysis = async () => {
+    const fetchQuizData = async () => {
       try {
         const token = localStorage.getItem('auth-token');
         const response = await axios.get(`/api/quiz/${quizId}/getQuestionAnalysis`, {
@@ -14,40 +14,57 @@ const OptionAnalysis = ({ quizId, questionIndex }) => {
             Authorization: `Bearer ${token}`,
           },
         });
-
-        console.log('Fetched Data:', response.data);
-
-        if (response.data && response.data.analysis && response.data.analysis[questionIndex]) {
-          setOptionAnalysis(response.data.analysis[questionIndex].optionAnalysis);
-        } else {
-          console.error('Unexpected data structure:', response.data);
-        }
+        setQuizData(response.data);
       } catch (error) {
-        console.error('Error fetching option analysis:', error);
+        console.error('Error fetching quiz data:', error);
       }
     };
 
-    fetchOptionAnalysis();
-  }, [quizId, questionIndex]);
+    fetchQuizData();
+  }, [quizId]);
 
-  if (!optionAnalysis) {
+  if (!quizData || !quizData.questions) {
     return <div>Loading...</div>;
   }
 
+  console.log(quizData.text)
+
   return (
-    <div className="option-analysis">
-      <h3>{`Q.${questionIndex + 1} Option Analysis`}</h3>
-      <div className="options-container">
-        {optionAnalysis.map((option, oIndex) => (
-          <div key={oIndex} className="option-box">
-            <span className="option-count">{option.selectedCount}</span>
-            <span className="option-text">{`Option ${oIndex + 1}: ${option.text}`}</span>
-          </div>
-        ))}
+    <div className="option-analysis-container">
+      <div className="questionAnalysis-quiz-info">
+        <h2>{quizData.quizTitle} Question Analysis</h2>
+        <p className="quiz-meta" style={{ color: '#FF5D01' }}>
+          Created on: <span className="creation-date">{new Date(quizData.creationDate).toLocaleDateString()}</span>
+          <br />
+          Impressions: <span className="impressions">{quizData.impressions}</span>
+        </p>
       </div>
+      <div className='Optionanalysis_container'>
+      {quizData.questions.map((question, qIndex) => {
+        const options = question.optionAnalysis || [];
+        
+        return (
+          <div key={qIndex} className="option-analysis">
+            <h3>{`Q.${qIndex + 1} ${question.text}`}</h3>
+            <div className="options-container">
+              {options.length > 0 ? (
+                options.map((option, oIndex) => (
+                  <div key={oIndex} className="option-box">
+                    <span className="option-count">{option.selectedCount}</span>
+                    <span className="option-text">{`Option ${oIndex + 1}`}</span>
+                  </div>
+                ))
+              ) : (
+                <div>No options available</div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+      </div>
+      <button onClick={onBackClick} className="back-button">Back to Questions</button>
     </div>
   );
 };
 
 export default OptionAnalysis;
-
