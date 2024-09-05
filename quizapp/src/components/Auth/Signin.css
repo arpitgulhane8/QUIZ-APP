@@ -1,0 +1,88 @@
+.signin-component {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .signin_inputGroup {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .signin_inputGroup label {
+    width: 25%;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .signin_inputGroup input {
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signin_inputGroup input.error {
+    border-color: red;
+  }
+  
+  .signin_inputGroup .error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 0 5px;
+  }
+  
+  .signin_btn {
+    width: 50%;
+    padding: 10px;
+    background: #A9BCFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight:bold;
+    margin-top: 10px;
+  }
+  
+  .signin_btn:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  
+
+  .signin_popup {
+    position: fixed;
+    top: 20px; /* Position the popup at the top */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensure the popup is above other elements */
+  }
+  
+  .signin_popup.success {
+    background: green; /* Success color */
+  }
+  
+  .signin_popup.error {
+    background: red; /* Error color */
+  }
+  

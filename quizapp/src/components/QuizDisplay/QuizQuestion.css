@@ -1,0 +1,86 @@
+.yo {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #041325;
+}
+
+.quizinterface-container {
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: 'Poppins, sans-serif';
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.quizinterface-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.quizinterface-questionNumber {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.quizinterface-timer {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.quizinterface-questionText {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.quizinterface-optionsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 50px; /* Increased horizontal space between options */
+    row-gap: 20px; /* You can adjust the vertical space as needed */
+    margin-bottom: 20px;
+    width: 90%;
+    height: 70%;
+    box-sizing: border-box;
+}
+.quizinterface-option {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    box-sizing: border-box;
+}
+
+.quizinterface-option.selected {
+    border: 5px solid #5076FF; /* Highlight selected option */
+}
+
+.quizinterface-nextButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

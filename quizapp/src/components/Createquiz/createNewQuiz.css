@@ -1,0 +1,228 @@
+.createNewQuiz {
+    height: 100vh;
+    width: 100vw;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quiz-creation-container {
+    width: 35%;
+    height: 70%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 20%;
+}
+
+.main{
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.question-nav {
+    background-color: #e6e6e6;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.question-nav.active {
+    background-color: #474444;
+    color: white;
+    box-shadow:0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.question-nav.add-question {
+    background-color: #fff;
+    color: #474444;
+    border: 1px solid #474444;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.option-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.option-type label {
+    display: inline-block;
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-group input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.option-group button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.add-option {
+    background-color: white;
+    color: #474444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-option:hover {
+    background-color:#333;;
+}
+
+.options-timer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 60%;
+    background-color: white;
+}
+
+.options-section {
+    flex: 1;
+}
+
+.timer-section {
+    flex: 0.4;
+
+}
+
+.timer-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.timer {
+    background-color: #e6e6e6;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.timer.on {
+    background-color: red;
+    color: white;
+}
+
+.timer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.timer-options label {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.c_cancel {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3)
+}
+
+.create-quiz {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3)
+}
+
+.create-quiz:hover {
+    background-color: #45a049;
+}
+

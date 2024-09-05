@@ -1,0 +1,66 @@
+.question-analysis-container{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-analysis h3{
+    font-size: 28px;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width of the container */
+  margin: 0; /* Remove default margin */
+  padding-left: 5px; /* Optional: add padding to the left */
+}
+
+.questionAnalysis-quiz-info{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+
+}
+
+.questionAnalysis-stat span{
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.questionAnalysis-quiz-info h2{
+    color: #5076FF;
+    font-size: 40px;
+    font-family: "Poppins";
+}
+
+.questionAnalysis-questioncontainer{
+    height: 80vh;
+    overflow: auto;
+    color: #474444;
+}
+
+.questionAnalysis-statcontainer{
+    display:flex;
+    justify-content: space-evenly;
+    width:"90%"
+}
+
+.questionAnalysis-stat{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    height: 18vh;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.questionAnalysis-quiz-meta{
+    color: yellow;
+    align-items: start;
+}
+
+.questionAnalysis-questioncontainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  }

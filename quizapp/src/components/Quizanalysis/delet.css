@@ -1,0 +1,26 @@
+.delete{
+    width: 35vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.delete p{
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: 600;
+    width: 80%;
+}
+
+.delete_btn{
+    color: white;
+    background-color: red;
+    border: 2px solid lightcoral;
+}

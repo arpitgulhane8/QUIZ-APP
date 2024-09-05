@@ -1,0 +1,91 @@
+.createQuize{
+    height: 100vh;
+    width: 100vw;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.createQuize_form{
+    height: 35%;
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.createQuize_quizeName{
+    width:80%;
+    height: 40px;
+    box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+    border:none;
+    border-radius: 5px;
+    color: #9F9F9F;
+    padding: 10px;
+}
+
+.createQuize_quizeName::placeholder{
+    font-size: 15px;
+    color: #9F9F9F;
+}
+
+.createQuize_creatQuizeComponent {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #9F9F9F;
+    font-size: 15px;
+}
+
+.createQuize_choice{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.createQuize_choice button{
+    background-color: white;
+    border: none;
+   box-shadow:0 0 8px rgba(0, 0, 0, 0.3);
+   padding: 5px;
+   width: 40%;
+   color: #9F9F9F;
+   border-radius: 5px;
+   
+}
+
+.createQuize_choice button:active {
+    background-color: #60B84B; /* Change to this color when clicked */
+    transform: scale(0.98); 
+    color: white;   
+  }
+
+
+.actions{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.actions button{
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
+}
+
+.action button:active {
+    background-color: #60B84B; /* Change to this color when clicked */
+    transform: scale(0.98);  
+    color: white;  
+  }
+

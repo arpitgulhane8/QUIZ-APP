@@ -1,0 +1,63 @@
+.login-component {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.login_inputGroup {
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login_inputGroup label {
+    display: block;
+    width: 25%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.login_inputGroup input {
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login_inputGroup input.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.login_btn {
+    width: 50%;
+    padding: 10px;
+    background: #A9BCFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight:bold;
+    margin-top: 10px;
+}
+
+.login_btn:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed;
+}

@@ -1,0 +1,72 @@
+.auth {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2f2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.auth_quizze {
+    font-size: 65px;
+    font-weight: lighter;
+    color: #474444;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-family: 'Jomhuria', sans-serif;
+}
+
+.a_groupBtn {
+    margin-top: 5px;
+    width: 50%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.a_btn {
+    flex: 1;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 5px;
+    transition: background-color 0.3s;
+   
+}
+
+.a_btn:active {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); /* Change to this color when clicked */
+    transform: scale(0.98);    /* Optional: Add a slight scale effect */
+  }
+
+.isLogin {
+    width: 60%;
+    height: 50%;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+
