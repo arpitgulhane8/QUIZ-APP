@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 app.use(cors({
-    origin:"https://quiz-8mk1o859b-arpit-gulhanes-projects.vercel.app",
+    origin:"https://quiz-8mk1o859b-arpit-gulhanes-projects.vercel.app/",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
     exposedHeaders: ['auth-token'],
