@@ -5,7 +5,9 @@ const path = require('path');
 
 const app = express();
 app.use(cors({
-    origin:"https://quiz-app-mocha-six.vercel.app",
+    origin:["https://quiz-app-mocha-six.vercel.app",
+            "https://quiz-app-git-master-arpit-gulhanes-projects.vercel.app",
+            "https://quiz-7vbhmm431-arpit-gulhanes-projects.vercel.app" ],
     credentials: true,
     exposedHeaders: ['auth-token'],
 }));
