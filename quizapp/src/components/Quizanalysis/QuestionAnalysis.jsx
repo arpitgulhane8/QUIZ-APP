@@ -11,7 +11,7 @@ const QuestionAnalysis = ({ quizId }) => {
     const fetchQuizAnalysis = async () => {
       try {
         const token = localStorage.getItem('auth-token');
-        const response = await axios.get(`/api/quiz/${quizId}/getQuizAnalysis`, {
+        const response = await axios.get(`https://quiz-app-backend-nzng.onrender.com/api/quiz/${quizId}/getQuizAnalysis`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

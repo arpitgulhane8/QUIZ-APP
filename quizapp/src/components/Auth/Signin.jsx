@@ -27,7 +27,7 @@ function Signin() {
     }
   
     try {
-      const response = await axios.post('/api/auth/register', {
+      const response = await axios.post('https://quiz-app-backend-nzng.onrender.com/api/auth/register', {
         name,
         email,
         password,

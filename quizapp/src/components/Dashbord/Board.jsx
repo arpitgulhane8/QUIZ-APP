@@ -16,7 +16,7 @@ function Board() {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem('auth-token');
-        const response = await axios.get('/api/quiz/getUserQuizStats', {
+        const response = await axios.get('https://quiz-app-backend-nzng.onrender.com/api/quiz/getUserQuizStats', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

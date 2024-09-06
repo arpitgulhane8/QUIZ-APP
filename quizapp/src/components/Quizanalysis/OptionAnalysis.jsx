@@ -9,7 +9,7 @@ const OptionAnalysis = ({ quizId, onBackClick }) => {
     const fetchQuizData = async () => {
       try {
         const token = localStorage.getItem('auth-token');
-        const response = await axios.get(`/api/quiz/${quizId}/getQuestionAnalysis`, {
+        const response = await axios.get(`https://quiz-app-backend-nzng.onrender.com/api/quiz/${quizId}/getQuestionAnalysis`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

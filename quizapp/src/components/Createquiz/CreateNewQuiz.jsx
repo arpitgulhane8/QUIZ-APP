@@ -85,7 +85,7 @@ const CreateNewQuiz = ({ onClose, quizName, quizType }) => {
         console.log(token);
       
         const response = await axios.post(
-          "/api/quiz/newquiz",
+          "https://quiz-app-backend-nzng.onrender.com/api/quiz/newquiz",
           quizData, // Pass the quizData as the request body
           {
             headers: {

@@ -19,7 +19,7 @@ const QuizInterface = () => {
     const fetchQuiz = async () => {
       try {
         const response = await axios.get(
-          `/api/quiz/solve/${quizId}`
+          `https://quiz-app-backend-nzng.onrender.com/api/quiz/solve/${quizId}`
         );
         if (response.data) {
           setQuiz(response.data); // Store quiz data in state
@@ -55,7 +55,7 @@ const QuizInterface = () => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        `/api/quiz/solveQuiz/${quizId}`,
+        `https://quiz-app-backend-nzng.onrender.com/api/quiz/solveQuiz/${quizId}`,
         { answers }
       );
 

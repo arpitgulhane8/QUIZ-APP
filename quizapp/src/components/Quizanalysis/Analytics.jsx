@@ -21,7 +21,7 @@ function Analytics() {
       try {
         const token = localStorage.getItem("auth-token");
         const response = await axios.get(
-          "/api/quiz/getQuizzesByUser",
+          "https://quiz-app-backend-nzng.onrender.com/api/quiz/getQuizzesByUser",
           {
             headers: {
               Authorization: `Bearer ${token}`, // Add the token to the request headers
@@ -46,7 +46,7 @@ function Analytics() {
     try {
       const token = localStorage.getItem("auth-token");
       await axios.delete(
-        `/api/quiz/deleteQuiz/${quizToDelete}`,
+        `https://quiz-app-backend-nzng.onrender.com/api/quiz/deleteQuiz/${quizToDelete}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // Add the token to the request headers
