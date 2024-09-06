@@ -36,7 +36,7 @@ exports.createQuiz = async (req, res) => {
     savedQuiz.questions = savedQuestions.map((q) => q._id);
     
     // Generate the shareable link (pointing to the frontend)
-    const shareableLink = `${req.protocol}://${req.get("host").replace('5000', '3000')}/api/quiz/solve/${savedQuiz._id}`;
+    const shareableLink = `${req.protocol}://quiz-app-mocha-six.vercel.app}/api/quiz/solve/${savedQuiz._id}`;
     savedQuiz.url = shareableLink;
 
     // Save the quiz again with the URL and question references
